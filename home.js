@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, Text, TouchableOpacity, Button} from 'react-native';
+import { StyleSheet, View, Image, Linking, Text, TouchableOpacity, Button} from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Left, Body, Right, Title } from 'native-base';
-import StripeCheckout from 'react-stripe-checkout';
+//import StripeCheckout from 'react-stripe-checkout';
 
 export default class Home extends React.Component {
 
@@ -18,10 +18,10 @@ export default class Home extends React.Component {
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 1</Text>
                  </Body>
-                 <StripeCheckout
-                         token={this.onToken}
-                         stripeKey="pk_test_prxw9H9C3g2hMFoMaoF2W48R"
-                       />
+                 <Button
+       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
+       title="BUY"
+     />
                </Left>
              </CardItem>
            </Card>
@@ -32,10 +32,10 @@ export default class Home extends React.Component {
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 2</Text>
                  </Body>
-                 <StripeCheckout
-                         token={this.onToken}
-                         stripeKey="pk_test_prxw9H9C3g2hMFoMaoF2W48R"
-                       />
+                 <Button
+       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
+       title="BUY"
+     />
                </Left>
              </CardItem>
            </Card>
@@ -46,10 +46,10 @@ export default class Home extends React.Component {
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 3</Text>
                  </Body>
-                 <StripeCheckout
-                          token={this.onToken}
-                          stripeKey="pk_test_prxw9H9C3g2hMFoMaoF2W48R"
-                        />
+                 <Button
+      onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
+       title="BUY"
+     />
                </Left>
              </CardItem>
            </Card>
@@ -60,10 +60,10 @@ export default class Home extends React.Component {
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 4</Text>
                  </Body>
-                 <StripeCheckout
-                      token={this.onToken}
-                      stripeKey="pk_test_prxw9H9C3g2hMFoMaoF2W48R"
-                    />
+                 <Button
+       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
+       title="BUY"
+     />
                </Left>
              </CardItem>
            </Card>
@@ -74,10 +74,10 @@ export default class Home extends React.Component {
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 5</Text>
                  </Body>
-                 <StripeCheckout
-                      token={this.onToken}
-                      stripeKey="pk_test_prxw9H9C3g2hMFoMaoF2W48R"
-                    />
+                 <Button
+       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
+       title="BUY"
+     />
                </Left>
              </CardItem>
            </Card>
