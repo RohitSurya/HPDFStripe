@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, Linking, Text, TouchableOpacity, Button} from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Left, Body, Right, Title } from 'native-base';
-//import StripeCheckout from 'react-stripe-checkout';
+import { StyleSheet, View, Image, Linking, Text, WebView, TouchableOpacity, Button} from 'react-native';
+import { Container, Header, Footer, Content, Card, CardItem, Thumbnail, Left, Body, Right, Title } from 'native-base';
+import Pay from './pay.js';
 
 export default class Home extends React.Component {
-
 
   render() {
     return (
@@ -15,15 +14,13 @@ export default class Home extends React.Component {
              <CardItem>
                <Left>
                  <Thumbnail source={require('./src/p1.jpg')} />
-                 <Body>
+                <Body>
                    <Text style={{fontWeight:'bold'}}>Product 1</Text>
+                   <Text>$ 400</Text>
                  </Body>
-                 <Button
-       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
-       title="BUY"
-     />
-               </Left>
-             </CardItem>
+              </Left>
+               <Pay />
+            </CardItem>
            </Card>
            <Card>
              <CardItem>
@@ -31,12 +28,10 @@ export default class Home extends React.Component {
                 <Thumbnail source={require('./src/p5.jpg')} />
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 2</Text>
+                   <Text>$ 500</Text>
                  </Body>
-                 <Button
-       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
-       title="BUY"
-     />
                </Left>
+                <Pay />
              </CardItem>
            </Card>
            <Card>
@@ -45,12 +40,10 @@ export default class Home extends React.Component {
                 <Thumbnail source={require('./src/p2.jpg')} />
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 3</Text>
+                   <Text>$ 600</Text>
                  </Body>
-                 <Button
-      onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
-       title="BUY"
-     />
                </Left>
+                <Pay />
              </CardItem>
            </Card>
            <Card>
@@ -59,12 +52,10 @@ export default class Home extends React.Component {
                 <Thumbnail source={require('./src/p4.jpg')} />
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 4</Text>
+                   <Text>$ 700</Text>
                  </Body>
-                 <Button
-       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
-       title="BUY"
-     />
                </Left>
+                <Pay />
              </CardItem>
            </Card>
            <Card>
@@ -73,14 +64,12 @@ export default class Home extends React.Component {
                 <Thumbnail source={require('./src/p3.jpg')} />
                  <Body>
                    <Text style={{fontWeight:'bold'}}>Product 5</Text>
+                   <Text>$ 800</Text>
                  </Body>
-                 <Button
-       onPress={() => Linking.openURL('https://checkout.stripe.com/checkout.js')}
-       title="BUY"
-     />
                </Left>
+                <Pay />
              </CardItem>
-           </Card>
+           </Card> 
          </Content>
        </Container>
     );
